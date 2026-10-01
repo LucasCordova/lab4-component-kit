@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://cabinet_a/cabinet_a.gd" id="1_cab"]
+[ext_resource type="PackedScene" path="res://shared/walls.tscn" id="2_walls"]
+[ext_resource type="PackedScene" path="res://cabinet_a/blitz.tscn" id="3_blitz"]
+[ext_resource type="PackedScene" path="res://cabinet_a/bandit.tscn" id="4_bandit"]
+
+[node name="CabinetA" type="Node2D"]
+script = ExtResource("1_cab")
+
+[node name="Walls" parent="." instance=ExtResource("2_walls")]
+
+[node name="Hint" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 800.0
+offset_bottom = 60.0
+text = "BANDIT BRAWL   move: arrows or WASD   throw: Space   menu: Escape"
+
+[node name="Blitz" parent="." instance=ExtResource("3_blitz")]
+position = Vector2(150, 324)
+
+[node name="Bandit" parent="." instance=ExtResource("4_bandit")]
+position = Vector2(820, 160)
+
+[node name="Bandit2" parent="." instance=ExtResource("4_bandit")]
+position = Vector2(960, 324)
+
+[node name="Bandit3" parent="." instance=ExtResource("4_bandit")]
+position = Vector2(820, 490)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://cabinet_b/cabinet_b.gd" id="1_cab"]
+[ext_resource type="PackedScene" path="res://cabinet_b/orchard.tscn" id="2_orchard"]
+[ext_resource type="PackedScene" path="res://cabinet_b/cannon.tscn" id="3_cannon"]
+
+[node name="CabinetB" type="Node2D"]
+script = ExtResource("1_cab")
+
+[node name="Hint" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 800.0
+offset_bottom = 50.0
+text = "CRATE CRASH   slide: left and right   fire: Space   menu: Escape"
+
+[node name="Orchard" parent="." instance=ExtResource("2_orchard")]
+
+[node name="Cannon" parent="." instance=ExtResource("3_cannon")]
+position = Vector2(576, 540)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/tree.png" id="1_tree"]
+
+[node name="Orchard" type="Node2D"]
+
+[node name="Ground" type="ColorRect" parent="."]
+offset_top = 612.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.13, 0.3, 0.2, 1)
+
+[node name="TreeLeft" type="Sprite2D" parent="."]
+position = Vector2(200, 600)
+texture = ExtResource("1_tree")
+
+[node name="TreeMiddle" type="Sprite2D" parent="."]
+position = Vector2(576, 600)
+texture = ExtResource("1_tree")
+
+[node name="TreeRight" type="Sprite2D" parent="."]
+position = Vector2(952, 600)
+texture = ExtResource("1_tree")

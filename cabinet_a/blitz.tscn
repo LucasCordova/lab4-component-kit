@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/blitz.png" id="1_blitz"]
+[ext_resource type="Script" path="res://cabinet_a/blitz.gd" id="2_blitz"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blitz"]
+size = Vector2(30, 30)
+
+[node name="Blitz" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("2_blitz")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_blitz")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_blitz")

@@ -1,0 +1,5 @@
+# Godot build cache - never commit
+.godot/
+# OS noise
+.DS_Store
+Thumbs.db

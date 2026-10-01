@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/bandit.png" id="1_bandit"]
+[ext_resource type="Script" path="res://cabinet_a/bandit.gd" id="2_bandit"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bandit"]
+size = Vector2(28, 28)
+
+[node name="Bandit" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("2_bandit")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bandit")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bandit")

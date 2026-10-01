@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h"]
+size = Vector2(1152, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v"]
+size = Vector2(24, 648)
+
+[node name="Walls" type="StaticBody2D"]
+
+[node name="TopRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 24.0
+color = Color(0.16, 0.13, 0.35, 1)
+
+[node name="BottomRect" type="ColorRect" parent="."]
+offset_top = 624.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.16, 0.13, 0.35, 1)
+
+[node name="LeftRect" type="ColorRect" parent="."]
+offset_right = 24.0
+offset_bottom = 648.0
+color = Color(0.16, 0.13, 0.35, 1)
+
+[node name="RightRect" type="ColorRect" parent="."]
+offset_left = 1128.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.16, 0.13, 0.35, 1)
+
+[node name="Top" type="CollisionShape2D" parent="."]
+position = Vector2(576, 12)
+shape = SubResource("RectangleShape2D_h")
+
+[node name="Bottom" type="CollisionShape2D" parent="."]
+position = Vector2(576, 636)
+shape = SubResource("RectangleShape2D_h")
+
+[node name="Left" type="CollisionShape2D" parent="."]
+position = Vector2(12, 324)
+shape = SubResource("RectangleShape2D_v")
+
+[node name="Right" type="CollisionShape2D" parent="."]
+position = Vector2(1140, 324)
+shape = SubResource("RectangleShape2D_v")
